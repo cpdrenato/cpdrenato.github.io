@@ -1,0 +1,18 @@
+html, body {
+    padding: 0;
+    margin: 0;
+}
+
+canvas {
+    /*border: black solid 3px;*/
+    /*margin: 3px 0 0 3px;*/
+    cursor: crosshair;
+}
+
+body{
+display: flex;
+}
+
+.control{
+/*display: flex;*/
+}

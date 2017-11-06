@@ -1,0 +1,81 @@
+html {
+  /*give border*/
+  padding         : 16px;
+  background-color: rgb(10, 61, 65);
+
+  height          : 100vh;
+  width           : 100vw;
+
+  box-sizing      : border-box;
+
+}
+
+body {
+  height                : 100%;
+  width                 : 100%;
+
+  background-color      : #fff;
+  color                 : #282828;
+  text-rendering        : optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  font-smooth           : always;
+  line-height           : 26px;
+  margin                : 0;
+  /*padding               : 44px;*/
+
+  box-shadow            : 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  border-radius         : 2px;
+
+  /*make effect on text so looks sharp/embossed*/
+  text-shadow           : 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+
+}
+
+* {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+body {
+  overflow: hidden;
+}
+
+.gallery {
+  height         : 100%;
+  width          : 100%;
+
+  /*transform      : rotate(45deg);*/
+
+  display        : flex;
+  flex-direction : column;
+  justify-content: center;
+  align-items    : center;
+}
+
+.pic {
+
+  flex      : 1;
+  transition: cubic-bezier(0.18, 0.89, 0.32, 1.28) .7s;
+
+  width     : 100%;
+  height    : 100%;
+  /*border    : solid red 1px;*/
+
+  overflow  : hidden;
+
+  opacity   : .8;
+
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+
+}
+
+.pic:hover {
+  flex      : 3;
+
+  opacity   : 1;
+  box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+
+}
+
+.pic img {
+  width: 100%;
+}

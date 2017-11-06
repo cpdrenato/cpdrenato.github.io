@@ -1,0 +1,131 @@
+:root {
+    --background: hsl(0, 100%, 5%);
+    --color: hsl(0, 100%, 90%);
+    --text: 10px 10px 0 hsl(0, 100%, 75%);
+    --border: solid hsl(0, 100%, 90%) 0.5vw;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: 'helvetica neue', 'ubuntu';
+    text-align: center;
+    transition: all ease 0.5s;
+    background-color: var(--background);
+}
+
+body {
+    height: 10vh;
+}
+
+header {
+    height: 20vh;
+}
+
+.content {
+    height: 74vh;
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+}
+
+.clock {
+    position: relative;
+    border: var(--border);
+    border-radius: 50%;
+    width: 25vw;
+    height: 25vw;
+    padding: 3px;
+}
+
+.clock-face {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform: translateY(-.2vw);
+}
+
+.arrow {
+    background-color: var(--color);
+    transform: rotate(90deg);
+    transform-origin: 100%;
+    position: absolute;
+    top: 50%;
+    width: 50%;
+    transition: all cubic-bezier(0, 0, 0, 1.46) 0.05s;
+}
+
+.sec {
+    height: 0.5vw;
+}
+
+.min {
+    height: 0.75vw;
+}
+
+.hur {
+    height: 1vw;
+}
+
+.pin {
+    background-color: var(--color);
+    position: absolute;
+    top: 48.5%;
+    left: 45%;
+    width: 2vw;
+    height: 2vw;
+    border-radius: 50%;
+}
+
+header {
+    color: var(--color);
+    height: 20vh;
+    margin: 0;
+}
+
+header p, header h1 {
+    padding-top: 5vh;
+    margin: 0;
+}
+
+header p {
+    font-size: 2vw;
+}
+
+header h1 {
+    font-size: 8vh;
+}
+
+footer {
+    font-size: 2vh;
+}
+
+footer p {
+    color: var(--color);
+}
+
+footer span {
+    color: var(--color);
+}
+@media only screen and (max-width: 801px) {
+    .clock {
+        width: 50vw;
+        height: 50vw;
+    }
+    .pin {
+        top: 49%;
+        left: 47.5%;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .clock {
+        width: 75vw;
+        height: 75vw;
+    }
+    .pin {
+        top: 49.5%;
+        left: 48.5%;
+    }
+}

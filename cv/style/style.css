@@ -1,0 +1,237 @@
+html {
+  /*give border*/
+  padding         : 16px;
+  background-color: rgb(10, 61, 65);
+}
+
+body {
+  background-color      : #fff;
+  color                 : #282828;
+  text-rendering        : optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  font-smooth           : always;
+  line-height           : 26px;
+  margin                : 0;
+  padding               : 114px;
+  box-sizing            : border-box;
+
+  box-shadow            : 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  border-radius         : 2px;
+
+  /*make effect on text so looks sharp/embossed*/
+  text-shadow           : 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+
+}
+
+* {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+/*scroll*/
+::-webkit-scrollbar {
+  width     : 8px;
+  background: #fff;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #293f50;
+}
+
+/*hero*/
+header h1 {
+  font-size: 88px;
+}
+
+header h1:last-child {
+  color: rgb(10, 61, 65);
+}
+
+/*each h2 on right had spacing to the top except the first (inside 'profil' class)*/
+.kanan div > h2 {
+  margin-top: 44px;
+}
+
+.profil h2 {
+  margin-top: 4px !important;
+}
+
+/*make different first letter on h2*/
+.kanan div > h2::first-letter {
+  font-size: 52px;
+  color    : rgb(10, 61, 65);
+}
+
+/*all direct div under main*/
+main > div {
+  padding: 32px;
+}
+
+/*left box ( 'about me' )*/
+.kiri {
+  width          : 416px;
+  float          : left;
+  margin         : 168px 54px 54px 0;
+
+  background     : #293f50;
+  color          : #fff;
+
+  box-shadow     : 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  border-radius  : 2px;
+
+  display        : flex;
+  flex-direction : column;
+  justify-content: center;
+  align-items    : center;
+
+}
+
+/*profile picture*/
+.kiri img {
+  border-radius: 50%;
+  width        : 300px;
+  margin-top   : -180px;
+  box-shadow   : 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+/*hyperlink on social contact icon */
+a {
+  text-decoration: none;
+}
+
+/*overwrite default of list*/
+ul {
+  list-style  : none;
+  padding-left: 0;
+}
+
+/*container of svg and img on skill and contact*/
+
+.kontak li,
+.skill ul li {
+  box-sizing   : border-box;
+  display      : inline-block;
+  font-size    : 13px;
+  height       : 67px;
+  margin       : 0 1px 4px 0;
+  padding      : 16px 12px;
+  text-align   : left;
+  width        : 190px;
+
+  box-shadow   : 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  border-radius: 2px;
+}
+
+.kontak li {
+  width: auto;
+}
+
+/*svg and img on skill and contact*/
+li img,
+svg {
+  float  : left;
+  height : 2rem;
+  margin : -0.5rem 0 0;
+  padding: .5rem 1.25rem 0 .5rem;
+  width  : 2rem;
+}
+
+li img {
+  width: auto;
+}
+
+circle,
+ellipse,
+path {
+  fill: #FFF;
+}
+
+/*text beside svg icon*/
+li h2 {
+  color  : #FFF;
+  display: inline-block;
+  margin : 4px;
+}
+
+/*check icon*/
+span {
+  font-size     : 1rem;
+  opacity       : 1;
+  padding-right : 8px;
+  text-transform: uppercase;
+}
+
+/*responsive*/
+@media screen and (max-width: 800px) {
+  header h1 {
+    font-size: 72px;
+  }
+
+  .kontak li h2 {
+    display: none;
+    margin : 0;
+  }
+
+  .kontak li svg {
+    margin : 0;
+    padding: 0;
+    width  : 2rem;
+  }
+
+  .kontak li {
+    width        : 67px;
+    border-radius: 50%;
+    padding      : 17px;
+    cursor       : pointer;
+    margin       : 6px;
+  }
+
+  .kontak ul,
+  .skill ul {
+    list-style     : none;
+    width          : 100%;
+    padding-left   : 0;
+    display        : flex;
+    justify-content: center;
+    align-items    : center;
+    flex-direction : row;
+    flex-wrap      : wrap;
+  }
+}
+@media screen and (max-width: 700px) {
+  body {
+    padding: 0;
+  }
+
+  header h1 {
+    font-size: 32px;
+  }
+
+  main > div {
+    padding: 24px;
+  }
+
+  header {
+    padding: 18px;
+  }
+
+  .kanan div > h2 {
+    text-align: center;
+  }
+
+  .kanan div > h2::first-letter {
+    font-size: 36px;
+  }
+
+  .kiri {
+    width        : auto;
+    float        : none;
+    margin       : 0;
+    border-radius: 0;
+  }
+
+  .kiri img {
+    width : 70vw;
+    margin: 0;
+  }
+
+}

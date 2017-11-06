@@ -1,0 +1,331 @@
+/*ane nih remake dari http://benadam.me  */
+
+html {
+    background-image: url(../images/background.png);
+    padding: 8px;
+}
+
+body {
+    font-family: 'ubuntu';
+    background-color: white;
+    padding: 24px 24px 24px 24px;
+    word-wrap: break-word;
+    line-height: 1.6;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+    background: white;
+}
+
+::-webkit-scrollbar-thumb {
+    background: gray;
+}
+
+button {
+    font-family: 'ubuntu';
+}
+
+
+/*navigation*/
+
+.responsive-nav {
+    margin: 32px 0;
+    width: 80vw;
+    height: 42px;
+    border: 1px gray solid;
+    border-radius: 5px;
+    background: none;
+    display: none;
+}
+
+.profilePic {
+    width: 5em;
+    border-radius: 50%;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+}
+
+.profile p {
+    margin-left: 16px;
+}
+
+nav a {
+    color: black;
+    text-decoration: none;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+nav {
+    padding: 16px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+nav>* {
+    flex-grow: 1;
+    flex-shrink: 0;
+}
+
+nav ul {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+nav ul li a {
+    display: block;
+    line-height: 16px;
+    padding: 24px 32px;
+}
+
+
+/*greeting header*/
+
+header {
+    max-width: 80em;
+    margin: 0 5em;
+    padding: 6em 2em;
+}
+
+header h1 {
+    font-size: 2em;
+    line-height: 1.5em;
+    margin-bottom: 1em;
+}
+
+
+/*content*/
+
+.content {
+    padding: 0 15em;
+}
+
+.content>* {
+    padding: .5em 0;
+}
+
+.content>h3 {
+    font-weight: bold;
+    font-size: 1.5em;
+    color: gray;
+}
+
+.content>h4 {
+    font-size: 1.25em;
+    color: orange;
+}
+
+.content>p {
+    font-size: 1em;
+}
+
+
+/*contact*/
+
+.contact>* {
+    text-align: center;
+}
+
+.contact h1 {
+    font-size: 2em;
+    padding-top: 1em;
+}
+
+.contact h3 {
+    padding: 1em;
+    color: orange;
+    font-size: 1.5em;
+}
+
+.contact p a {
+    color: black;
+    text-decoration: none;
+    transition: ease 0.3s;
+    padding: 10px;
+    border: solid orange 1px;
+    border-radius: 5px;
+    display: block;
+    max-width: 20em;
+    margin: .5em auto;
+}
+
+.contact p a:hover {
+    color: gray;
+    text-decoration: underline;
+}
+
+hr {
+    margin: 3em 0;
+}
+
+
+/*footer*/
+
+footer>* {
+    font-size: .9em;
+    text-align: center;
+}
+
+
+/*********project*/
+
+.projects {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*flex-direction: row;*/
+    flex-wrap: wrap;
+}
+
+.project {
+    margin: 1em;
+    height: 250px;
+    width: auto;
+    flex: 0 1 250px;
+    background-size: cover;
+    border: 1px solid gray;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.project.status {
+    background-image: url(../images/3.jpg);
+}
+
+.project.clock {
+    background-image: url(../images/clock.jpeg);
+}
+
+.project.changeCSS {
+    background-image: url(../images/changeCSS.jpeg);
+}
+
+.project.canvas {
+    background-image: url(../images/canvas.jpeg);
+}
+
+.project.lifeGame {
+    background-image: url(../images/lifeGame.jpeg);
+}
+.project.flexPanel {
+    background-image: url(../images/gallery.png);
+}
+
+.project.cv {
+    background-image: url(../images/cv.png);
+}
+
+.project.jsCalc {
+    background-image: url(../images/jsCalc.png);
+}
+
+.project.nyelowyok {
+    background-image: url(../images/nyelowyok.png);
+}
+
+.project.nyelowyokLanding {
+    background-image: url(../images/nyelowyokLanding.png);
+}
+
+.project.podomoro {
+    background-image: url(../images/podomoro.png);
+}
+
+.project.quote {
+    background-image: url(../images/quote.png);
+}
+
+.project.recipeTaker {
+    background-image: url(../images/recipeTaker.png);
+}
+
+.project.regresiCalc {
+    background-image: url(../images/regresiCalc.png);
+}
+
+.project.shortener {
+    background-image: url(../images/shortener.png);
+}
+
+.project.tictactoe {
+    background-image: url(../images/tictactoe.png);
+}
+
+.project.topFcc {
+    background-image: url(../images/topFcc.png);
+}
+
+
+.project.twittch {
+    background-image: url(../images/twittch.png);
+}
+
+
+.project.wikipedia {
+    background-image: url(../images/wikipedia.png);
+}
+
+
+.project-detail {
+    transition: ease .5s;
+    width: 100%;
+    padding: 8px 16px;
+    opacity: 0;
+    color: white;
+    font-size: .75em;
+}
+
+.project:hover .project-detail {
+    background-color: black;
+    opacity: 1;
+}
+
+
+/*responsive*/
+
+@media screen and (max-width: 800px) {
+    .content {
+        padding: 0;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .responsive-nav {
+        display: block;
+    }
+    .profile {
+        justify-content: center;
+    }
+    header {
+        margin: 0;
+    }
+    nav {
+        flex-direction: column;
+    }
+    nav ul {
+        text-align: center;
+        display: none;
+    }
+    nav ul.responsive {
+        display: block;
+    }
+    nav ul li{
+border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+    }
+}
+
+@media screen and (max-width: 370px) {
+    .project {
+        height: 200px;
+    }
+}
